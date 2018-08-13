@@ -1,0 +1,218 @@
+@import '../main';
+
+.homepage{
+    background: radial-gradient(circle, rgba(42, 150, 213, 0.7) , $secondaryColor 35%);
+    background-color: $secondaryColor;
+    background-size: cover;
+    width: stretch;
+    height: stretch;
+    color: white;
+    font-weight: bolder;
+    font-size: .75em;
+    &:hover{
+        filter: blur(20)
+    }
+    &>.container{
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr 10fr 1fr;
+        grid-template-columns: 30px 3fr 10fr 3fr 30px;
+
+        &>header{
+            display: flex;
+            justify-content: flex-start; 
+            align-items: center;
+            text-transform: uppercase;
+            grid-column: 2/3;
+            grid-row: 1/2;
+            padding: auto;
+            color: $primaryColor;
+            cursor: pointer;
+            animation: top 3s forwards -1s;
+        }
+
+        &>nav{
+            display: flex;
+            justify-content: flex-end; 
+            align-items: center;
+            text-transform: uppercase;
+            grid-column: 3/5;
+            grid-row: 1/2;
+            animation: top 3s forwards -1s;
+            &>a{
+                text-decoration: none;
+                padding:0 0 0 1em;
+                cursor: pointer;
+                &:hover{
+                    color: $primaryColor;
+                }
+            }
+        }    
+
+        @keyframes top {
+            from{
+                transform: translateY(-100px)
+            }
+            to{
+                transform: translateY(0)
+            }
+        }
+
+        &>section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-row: 2/3;
+            grid-column: 3/4;
+            &>.background-image{
+                width:30em;
+                // animation: abstract 20s linear 0s infinite backwards ;
+             }
+            @keyframes abstract {
+                from{
+                    transform: rotateZ(0deg);
+                }                
+                to{
+                    transform: rotateZ(360deg);
+                }
+            }
+        }
+
+        &>.main{
+            grid-row: 2/3;
+            grid-column: 3/4;
+            z-index: 1;
+            margin: auto;
+            animation: main 5s linear infinite;
+            width: 55em;
+            @keyframes main{
+                0%{transform: translateY(-10px)}
+                50%{transform: translateY(0px)}
+                100%{transform: translateY(-10px)}
+            }
+        }
+
+        &>.left{
+            grid-row: 2/3;
+            grid-column:2/3;
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            animation: left-in 3s ease-out -1s forwards;
+            @keyframes left-in {
+                from{transform:translate(-50px)}
+                to{transform: translate(0)}
+            }
+            &>div{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction:row;
+                &>div{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width:20vw;
+                    & *{
+                        margin: .1em;
+                    }
+                    &>img{
+                        width: 12em  
+                    }
+                    &>h2{
+                        color: $primaryColor;
+                    }
+                    &>h3{
+                        font-style: italic;
+                    }
+                }
+            }
+
+        }
+
+        &>.right{
+            grid-column: 4/5;
+            grid-row: 2/3;
+            display:flex;
+            // justify-content: center;
+            align-items: center;
+            // flex-direction: column;
+            // position: absolute;
+            overflow: hidden;
+            animation: right-in 3s ease-out -1s forwards;
+            @keyframes right-in {
+                from{transform:translate(50px)}
+                to{transform: translate(0)}
+            }
+            &>.rightSlider{
+                display:flex;
+                flex-direction: row;
+                &>div{
+                    width:22em;
+                    &>h3{
+                        color: $primaryColor;
+                        text-transform: uppercase;
+                    }
+                    & ul{
+                        list-style-type: none;
+                        margin: 0em;
+                        padding: 0em;
+                        & li{
+                            display: inline-flex;
+                            &:before{
+                                margin:.3em;
+                                content: '';
+                                background-position: center center;
+                                vertical-align: top;
+                                display: inline-block;
+                                height: 1.5em;
+                                width: 1.5em;
+                                background: url('../../assets/listMarker.png') no-repeat;
+                                background-size: 1.5em 1.5em;
+                                
+                            }
+                            &>div{
+                                display: inline;
+                                &>*{
+                                    margin: .3em;
+                                }
+                                &>h4{
+                                    text-transform: uppercase;
+                                }
+                            } 
+                        }
+                    }
+                }
+            }
+        }
+
+        &>.btn{
+            grid-row: 2/3;
+            grid-column: 3/4;
+            display:flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding:3em;
+            &>button{
+                width:fit-content;
+                height:fit-content;
+                padding: .5em 1.5em;
+                text-transform:uppercase;
+                font-weight: bolder;
+                color:white;
+                background-color:transparent;
+                border: .15em solid white;
+                &:hover{
+                    color: $primaryColor;
+                    border-color: $primaryColor;
+                    cursor: pointer;
+                }
+
+
+
+            }
+        }
+    }
+}
