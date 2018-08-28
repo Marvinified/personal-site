@@ -1,0 +1,64 @@
+.inputified {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em;
+  color: #404040;
+}
+.inputified > label {
+  padding-bottom: 0.2em;
+  padding-left: 0.3em;
+  font-weight: thin;
+  font-size: 0.8em;
+  text-transform: capitalize;
+}
+.inputified:not(.curved):not(.flat) > label {
+  opacity: 0;
+  transform: translateY(0.5em);
+  transition: 0.1s;
+}
+.inputified:not(.curved):not(.flat) > div:hover {
+  border-width: 0 0 0.1em 0;
+}
+.inputified:not(.curved):not(.flat):focus-within > label {
+  opacity: 1;
+}
+.inputified:not(.curved):not(.flat):focus-within input::placeholder {
+  opacity: 0;
+  color: inherit;
+}
+.inputified > div {
+  width: fit-content;
+  border-width: 0 0 0.05em 0;
+  border-style: solid;
+  background: transparent;
+}
+.inputified > div input {
+  padding: 0.4em;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  z-index: 10;
+  color: inherit;
+  font: inherit;
+  text-transform: capitalize;
+}
+.inputified > div input::placeholder {
+  font-size: 0.8em;
+  font-weight: thin;
+  text-transform: capitalize;
+}
+.inputified.curved > div {
+  border: 0.05em solid #c0c0c0;
+  background: white;
+  border-radius: 0.3em;
+}
+.inputified.flat > div {
+  background: white;
+  border: 0.05em solid #c0c0c0;
+}
+.inputified.curved:focus-within > div, .inputified.flat:focus-within > div {
+  box-shadow: 0 0 0.2em 0 #0b87cf;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,19 +1,11 @@
 import React,  {Component, Fragment} from 'react'
-import './style.css'
 import LeftSection from './sections/LeftSection'
+import MainSection from './sections/MainSection'
+import RightSection from './sections/RightSection'
+import {Nav, Header, BottomLeft, BottomRight} from '../../components'
+import {Link} from 'react-router-dom'
+import './style.css'
 
-const MainSection =(
-    <Fragment>
-        <section>
-            <img src={require('../../assets/Abstract.png')} className="background-image"/>
-        </section>
-        <img src={require(`../../assets/Main.png`)} className="main"/>
-        <div className='btn'>
-            <button>SEE PORTFOLIO</button>
-
-        </div>
-    </Fragment>
-)
 
 class HomePage extends Component {
     state = {
@@ -21,21 +13,24 @@ class HomePage extends Component {
             left: 0,
             right: 0
         },
-        lastscroll:  0
+        lastscroll: 0,
+        touchY: 0
     }
 
     constructor(props){
         super(props)
         this.handleOnWheel = this.handleOnWheel.bind(this)
         this.handleLeftSlider = this.handleLeftSlider.bind(this)
+        this.handleOnTouchMove = this.handleOnTouchMove.bind(this)
     }
     componentDidMount(){
         this.leftSlideNodes = document.getElementsByClassName("leftSlide");
         this.leftSlideNode = this.leftSlideNodes[0]
         this.leftSliderNode = document.getElementById('leftSlider')
         this.rightSlideNodes = document.getElementsByClassName("rightSlide");
-        this.rightSlideNode = this.rightSlideNodes[0]
-        this.rightSliderNode = document.getElementById('rightSlider')
+        this.rightSlideNode = this.rightSlideNodes[0];
+        this.rightSliderNode = document.getElementById('rightSlider');
+        this.bottomSlider = document.getElementsByClassName('bottomCenter');
     }
 
     handleLeftSlider(e){
@@ -58,7 +53,7 @@ class HomePage extends Component {
 
                 // apply animation slider
                 this.leftSliderNode.style.transform ="translateX(-"+translateLength+"px)"
-                this.leftSliderNode.style.transition = "transform .5s"
+                this.leftSliderNode.style.transition = "transform 0s"
                 
                 // make next slide item fade in
                 this.leftSlideNodes[i].animate([
@@ -88,7 +83,7 @@ class HomePage extends Component {
 
                 // apply animation slider
                 this.leftSliderNode.style.transform ="translateX(-"+translateLength+"px)"
-                this.leftSliderNode.style.transition = "transform .5s"
+                this.leftSliderNode.style.transition = "transform 0s"
                 
                 // make next slide item fade in
                 this.leftSlideNodes[i].animate([
@@ -126,7 +121,7 @@ class HomePage extends Component {
 
                 // apply animation slider
                 this.rightSliderNode.style.transform ="translateX(-"+translateLength+"px)"
-                this.rightSliderNode.style.transition = "transform .5s"
+                this.rightSliderNode.style.transition = "transform 0s"
                 
                 // make next slide item fade in
                 this.rightSlideNodes[i].animate([
@@ -157,7 +152,7 @@ class HomePage extends Component {
 
                 // apply animation slider
                 this.rightSliderNode.style.transform ="translateX(-"+translateLength+"px)"
-                this.rightSliderNode.style.transition = "transform .5s"
+                this.rightSliderNode.style.transition = "transform 0s"
                 
                 // make next slide item fade in
                 this.rightSlideNodes[i].animate([
@@ -175,79 +170,84 @@ class HomePage extends Component {
 
     }
 
-    handleOnWheel(e){
+    handleOnWheel(e){ 
         const time =  (new Date().getTime())
         if(!this.state.lastscroll ||  time - this.state.lastscroll > 500){ 
             this.setState({lastscroll: time})
             const right = this.handleRightSlider(e)
             const left = this.handleLeftSlider(e)
-            console.log(left +"::"+right)
+
             this.setState({
                 translateLength:{
                     left, right
                 }
             })
-            // console.log(this.state.translateLength)
+
         }
     }
 
+    handleOnTouchMove(e){
+        e.preventDefault();
+        e.stopPropagation()
+
+        if(!this.state.touchY){
+            const touchY = e.targetTouches[0].screenY
+            this.setState({touchY})
+            return
+        }
+        const deltaY = this.state.touchY - e.targetTouches[0].screenY
+        e.deltaY = deltaY < 0 ? deltaY - 60 : deltaY + 60;
+        // alert(e.targetTouches[0].screenY)
+        const time =  (new Date().getTime())
+        // if(!this.state.lastscroll ||  time - this.state.lastscroll > 500){ 
+            this.setState({lastscroll: time, touchY:0})
+            const right = this.handleRightSlider(e)
+            const left = this.handleLeftSlider(e)
+
+            this.setState({
+                translateLength:{
+                    left, right
+                }
+            })
+
+        // }
+        
+
+    
+    }
     render(){
         return(
-            <div className="homepage" onWheel={this.handleOnWheel}>
-                <div className="container">
+            <div className="homepage" onTouchMove = {this.handleOnTouchMove} onWheel={this.handleOnWheel} id="main">
+                <div className="container" >
                     {/* Branding Header */}
-                    <header>I'M MARVIN</header>
+                    <Header />
+                    
                     {/* Navigation Bar */}
-                    <nav> 
-                        <a>PORTFOLIO</a>    
-                        <a>ABOUT ME</a>    
-                        <a>CONTACT ME</a>    
-                    </nav>
+                    <Nav />
+
                     {/* Left Section */}
                     {LeftSection}
+
                     {/* Main Section */}
                     {MainSection}
+
                     {/* Right Section */}
-                    <div className="right">
-                        <div className="rightSlider" id="rightSlider">
-                            <div className="rightSlide">
-                                <h3>MY JS ARMY</h3>
-                                <ul>
-                                    <li>
-                                        <div>
-                                            <h4>React.js</h4>
-                                            <p>A Javascript library for building UI...</p>
-                                            <a href="http://http://reactjs.org/">Learn More</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <h4>Node.js</h4>
-                                            <p>A JavaScript run-time environment</p>
-                                            <a href="https://nodejs.org/">Learn More</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>    
-                            <div className="rightSlide">
-                                <h3>Database</h3>
-                                <ul>
-                                    <li>
-                                        <div>
-                                            <h4>React Js</h4>
-                                            <p>React.js is a javascript ui library...</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <h4>React Js</h4>
-                                            <p>React.js is a javascript ui library...</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>    
-                        </div>
+                    {RightSection}
+
+                    {/* Bottom Left Section */}
+                    <BottomLeft />
+                    
+                    {/* Bottom Center */}
+                    <div className="bottomCenter">
+                        {
+                            !this.state.translateLength.left ? 
+                            "| - Scroll Up":
+                            "| - Scroll Down"
+                        }
                     </div>
+
+                    {/* Bottom Right Section */}
+                    <BottomRight />
                 </div>
             </div>
         )

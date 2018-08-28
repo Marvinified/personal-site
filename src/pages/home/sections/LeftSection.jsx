@@ -1,4 +1,5 @@
 import React from 'react'
+
 const LeftSection = (
     <div className="left">
         <div id="leftSlider">

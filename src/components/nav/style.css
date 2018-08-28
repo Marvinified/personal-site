@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+body #app {
+  width: stretch;
+  height: stretch;
+}
+body * {
+  font-family: cursive;
+}
+
+@media screen and (max-width: 1000px) {
+  * {
+    font-size: 0.95em;
+  }
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-transform: uppercase;
+  grid-area: nv;
+  animation: top 3s forwards -1s;
+}
+nav a {
+  text-decoration: none;
+  padding: 0 0 0 1em;
+  cursor: pointer;
+  color: inherit;
+}
+nav a:hover {
+  color: #2CAEF9;
+}
+@keyframes top {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

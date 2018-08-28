@@ -1,2 +1,21 @@
 $primaryColor : #2CAEF9;
 $secondaryColor : #21252B;
+
+body{
+    & #app{
+        width:stretch;
+        height: stretch;
+    }
+    & *{
+        font-family: cursive;
+    }
+    margin:0;
+    padding: 0;
+
+}
+
+@media screen and (max-width: 1000px){
+    * {
+        font-size: .95em; 
+    }
+}

@@ -1,72 +1,45 @@
 @import '../main';
 
 .homepage{
-    background: radial-gradient(circle, rgba(42, 150, 213, 0.7) , $secondaryColor 35%);
+    // background: url('../../assets/bg.png');
     background-color: $secondaryColor;
     background-size: cover;
     width: stretch;
-    height: stretch;
+    height: 100vh;
     color: white;
-    font-weight: bolder;
-    font-size: .75em;
-    &:hover{
-        filter: blur(20)
-    }
+    font-weight: bolder; 
+    font-size: .72em;
     &>.container{
+        background: radial-gradient(circle, rgba(42, 150, 213, 1) , transparent 30%);
+        width: stretch;
         height: 100vh;
         display: grid;
-        grid-template-rows: 1fr 10fr 1fr;
-        grid-template-columns: 30px 3fr 10fr 3fr 30px;
+        grid-template-columns:.2fr repeat(11, 1fr) .2fr;
+        grid-template-rows: .5fr repeat(6, 1fr) .5fr;
+        
+        grid-template-areas: 
+            ". hd hd nv nv nv nv nv nv nv nv nv ."
+            ". fs fs fs fs fs fs fs fs fs fs fs ."
+            ". ls ls mn mn mn mn mn mn mn rs rs ."
+            ". ls ls mn mn mn mn mn mn mn rs rs ."
+            ". ls ls mn mn mn mn mn mn mn rs rs ."
+            ". ls ls mn mn mn mn mn mn mn rs rs ."
+            ". ls ls pb pb pb pb pb pb pb rs rs ."
+            ". bl bl bl bc bc bc bc bc br br br .";
 
         &>header{
-            display: flex;
-            justify-content: flex-start; 
-            align-items: center;
-            text-transform: uppercase;
-            grid-column: 2/3;
-            grid-row: 1/2;
-            padding: auto;
             color: $primaryColor;
-            cursor: pointer;
-            animation: top 3s forwards -1s;
-        }
-
-        &>nav{
-            display: flex;
-            justify-content: flex-end; 
-            align-items: center;
-            text-transform: uppercase;
-            grid-column: 3/5;
-            grid-row: 1/2;
-            animation: top 3s forwards -1s;
-            &>a{
-                text-decoration: none;
-                padding:0 0 0 1em;
-                cursor: pointer;
-                &:hover{
-                    color: $primaryColor;
-                }
-            }
-        }    
-
-        @keyframes top {
-            from{
-                transform: translateY(-100px)
-            }
-            to{
-                transform: translateY(0)
-            }
-        }
+        }   
 
         &>section{
             display: flex;
             justify-content: center;
             align-items: center;
-            grid-row: 2/3;
-            grid-column: 3/4;
+            grid-area: mn;
+    
             &>.background-image{
-                width:30em;
-                // animation: abstract 20s linear 0s infinite backwards ;
+                width: 30vw;
+            
              }
             @keyframes abstract {
                 from{
@@ -79,12 +52,12 @@
         }
 
         &>.main{
-            grid-row: 2/3;
-            grid-column: 3/4;
+            grid-area: mn;
             z-index: 1;
-            margin: auto;
             animation: main 5s linear infinite;
-            width: 55em;
+            width: 45vw;
+            align-self: flex-end;
+            justify-self: center;
             @keyframes main{
                 0%{transform: translateY(-10px)}
                 50%{transform: translateY(0px)}
@@ -93,10 +66,8 @@
         }
 
         &>.left{
-            grid-row: 2/3;
-            grid-column:2/3;
+            grid-area: ls;
             display: flex;
-            // justify-content: center;
             align-items: center;
             overflow: hidden;
             animation: left-in 3s ease-out -1s forwards;
@@ -104,12 +75,12 @@
                 from{transform:translate(-50px)}
                 to{transform: translate(0)}
             }
-            &>div{
+            &>#leftSlider{
                 display:flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction:row;
-                &>div{
+                &>.leftSlide{
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -119,7 +90,7 @@
                         margin: .1em;
                     }
                     &>img{
-                        width: 12em  
+                        width: 10vw;  
                     }
                     &>h2{
                         color: $primaryColor;
@@ -129,17 +100,12 @@
                     }
                 }
             }
-
         }
 
         &>.right{
-            grid-column: 4/5;
-            grid-row: 2/3;
+            grid-area: rs;
             display:flex;
-            // justify-content: center;
             align-items: center;
-            // flex-direction: column;
-            // position: absolute;
             overflow: hidden;
             animation: right-in 3s ease-out -1s forwards;
             @keyframes right-in {
@@ -149,9 +115,16 @@
             &>.rightSlider{
                 display:flex;
                 flex-direction: row;
+                flex-wrap: nowrap;
                 &>div{
                     width:22em;
-                    &>h3{
+                    height: fit-content;
+                    & a{
+                        color: $primaryColor;
+                        text-decoration: none;
+                    }
+                    &>h2{
+                        margin:.5em .1em;
                         color: $primaryColor;
                         text-transform: uppercase;
                     }
@@ -159,24 +132,25 @@
                         list-style-type: none;
                         margin: 0em;
                         padding: 0em;
+                        height: fit-content;
                         & li{
                             display: inline-flex;
                             &:before{
-                                margin:.3em;
+                                margin:.5em;
                                 content: '';
                                 background-position: center center;
                                 vertical-align: top;
                                 display: inline-block;
-                                height: 1.5em;
-                                width: 1.5em;
+                                height: 1em;
+                                width: 1em;
                                 background: url('../../assets/listMarker.png') no-repeat;
-                                background-size: 1.5em 1.5em;
+                                background-size: 1em 1em;
                                 
                             }
                             &>div{
                                 display: inline;
                                 &>*{
-                                    margin: .3em;
+                                    margin: .5em;
                                 }
                                 &>h4{
                                     text-transform: uppercase;
@@ -188,22 +162,23 @@
             }
         }
 
+        
+        &>.bottomCenter{
+            grid-area: bc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $primaryColor
+        }
+
         &>.btn{
-            grid-row: 2/3;
-            grid-column: 3/4;
+            grid-area: pb;            
             display:flex;
             justify-content: center;
-            align-items: flex-end;
-            padding:3em;
-            &>button{
-                width:fit-content;
-                height:fit-content;
+            align-items: center;
+            & button{
                 padding: .5em 1.5em;
-                text-transform:uppercase;
-                font-weight: bolder;
                 color:white;
-                background-color:transparent;
-                border: .15em solid white;
                 &:hover{
                     color: $primaryColor;
                     border-color: $primaryColor;
@@ -211,7 +186,7 @@
                 }
 
 
-
+            
             }
         }
     }
