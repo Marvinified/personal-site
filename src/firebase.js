@@ -1,15 +1,8 @@
 import firebase from 'firebase'
 import 'firebase/firestore'
+import {FIREBASE} from './secrets'
 
-
-const config = {
-    apiKey: "AIzaSyCktRuffcnSC8HV-qsj5JIfGAHIH6WPTHo",
-    authDomain: "imarvinified.firebaseapp.com",
-    databaseURL: "https://imarvinified.firebaseio.com",
-    projectId: "imarvinified",
-    storageBucket: "imarvinified.appspot.com",
-    messagingSenderId: "866926024270"
-  };
+const config = FIREBASE;
 
 firebase.initializeApp(config)
 
