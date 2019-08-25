@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { HomePage, Portfolio, About, Hire } from "./pages";
+import { HomePage, About, Hire } from "./pages";
 import { Switch, BrowserRouter, Route } from "react-router-dom";
 import { ToastContainer, toast, dismiss } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
@@ -114,7 +114,7 @@ class App extends Component {
           {this.state.orientation === "landscape-primary" ||
           this.state.orientation === "landscape-secondary" ? (
             <Switch>
-              <Route path="/portfolio" component={Portfolio} />
+              {/* <Route path="/portfolio" component={Portfolio} /> */}
               <Route path="/loader" component={Loader} />
               <Route path="/hire" component={Hire} />
               <Route path="/about" component={About} />

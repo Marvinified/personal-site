@@ -9,7 +9,10 @@ class Nav extends Component {
   render() {
     return (
       <nav>
-        <a href="https://drive.google.com/file/d/1AGn-QK4kkvkghQIjb3XCmDs2J2RaY96j/view?usp=sharing">
+        <a
+          target="_blank"
+          href="https://drive.google.com/file/d/1d9QPZAC02SbBBcPfFhFOC1NvlnMGYmG-/view?usp=sharing"
+        >
           Resume
         </a>
         <Link to="/about">ABOUT ME</Link>
