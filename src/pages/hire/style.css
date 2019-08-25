@@ -7,7 +7,7 @@ body #app {
   height: stretch;
 }
 body * {
-  font-family: cursive;
+  font-family: "Roboto", sans-serif;
 }
 
 @media screen and (max-width: 1000px) {
@@ -19,13 +19,13 @@ body * {
   background-color: white;
   width: stretch;
   height: stretch;
-  color: #21252B;
+  color: #21252b;
   font-weight: bolder;
   font-size: 0.75em;
   animation: slide-in 1s;
 }
 .hire a {
-  color: #21252B;
+  color: #21252b;
 }
 @keyframes slide-in {
   from {
@@ -44,7 +44,7 @@ body * {
   grid-template-areas: ". hd hd hd ts nv nv nv ." ". ls ls ls rs rs rs s ." ". ls ls ls rs rs rs s ." ". ls ls ls rs rs rs s ." ". bl bl bc bc bc br br.";
 }
 .hire > .container > header > a {
-  color: #2CAEF9;
+  color: #2caef9;
 }
 .hire > .container > .left {
   grid-area: ls;
@@ -69,15 +69,15 @@ body * {
   font-size: 1.5em;
 }
 .hire > .container > .right label {
-  color: #2CAEF9;
+  color: #2caef9;
   font-size: 0.7em;
 }
 .hire > .container > .right .field {
-  color: #21252B;
+  color: #21252b;
   width: 20vw;
 }
 .hire > .container > .right .field:focus-within {
-  color: #2CAEF9;
+  color: #2caef9;
 }
 .hire > .container > .right .field input {
   font-size: 0.7em;

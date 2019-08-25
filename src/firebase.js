@@ -1,10 +1,10 @@
-import firebase from 'firebase'
-import 'firebase/firestore'
-import {FIREBASE} from './secrets'
+// import firebase from 'firebase'
+// import 'firebase/firestore'
+// import {FIREBASE} from './secrets'
 
-const config = FIREBASE;
+// const config = FIREBASE;
 
-firebase.initializeApp(config)
+// firebase.initializeApp(config)
 
-export const firestore = firebase.firestore()
-export const cloudstore = firebase.storage()
+// export const firestore = firebase.firestore()
+// export const cloudstore = firebase.storage()
