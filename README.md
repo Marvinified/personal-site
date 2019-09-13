@@ -1,3 +1,3 @@
-# marvinified.github.io
+# marvinified.dev
 My Personal DeveSite
-see here https://marvinified.github.io
+see here https://marvinified.dev
