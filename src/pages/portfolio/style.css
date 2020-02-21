@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+body #app {
+  width: stretch;
+  height: stretch;
+}
+body * {
+  font-family: cursive;
+}
+
+@media screen and (max-width: 1000px) {
+  * {
+    font-size: 0.95em;
+  }
+}
+.portfolio {
+  background-color: white;
+  width: stretch;
+  height: stretch;
+  color: #21252B;
+  font-weight: bolder;
+  font-size: 0.75em;
+}
+.portfolio a {
+  color: #21252B;
+}
+.portfolio > .container {
+  width: stretch;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 0.2fr 0.1fr 5fr repeat(4, 0.5fr) 0.1fr 3fr 0.2fr;
+  grid-template-rows: 0.4fr 0.05fr 0.3fr 3fr 0.1fr 0.4fr;
+  grid-template-areas: ". hd hd es es es es nv nv ." ". fs fs fs fs fs fs fs fs ." ". . sh sh sh ts ts ts ts . " ". ba sl sl sl sl sl fa ab ." ". . . . . . . . . ." ".  bl bl . . . . br br .";
+}
+.portfolio > .container > nav {
+  color: #21252B;
+}
+.portfolio > .container > header > a {
+  color: #2CAEF9;
+}
+.portfolio > .container > .sub {
+  grid-area: sh;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #2CAEF9;
+}
+.portfolio > .container > .sub * {
+  padding: 0;
+  padding-right: 0.2em;
+  margin: 0;
+}
+.portfolio > .container > .backArrow {
+  grid-area: ba;
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  animation: slide-in 2s -1s;
+}
+.portfolio > .container > .forwardArrow {
+  grid-area: fa;
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  animation: slide-in 2s -1s;
+}
+.portfolio > .container > .gridSlider {
+  grid-area: sl;
+  width: inherit;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5em;
+  text-align: center;
+  animation: slide-in 2s -1s;
+}
+.portfolio > .container > .gridSlider > .item {
+  position: relative;
+  border: 2px solid #2CAEF9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #21252B;
+}
+.portfolio > .container > .gridSlider > .item > .overlay {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: #fff;
+  background-color: rgba(33, 37, 43, 0.5);
+}
+.portfolio > .container > .gridSlider > .item:hover {
+  transform: scale(0.95);
+  transition: 0.5s;
+}
+.portfolio > .container > .gridSlider > .item:hover > .overlay {
+  display: flex;
+}
+.portfolio > .container > .gridSlider > .item > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.portfolio > .container > .fullSlider {
+  grid-area: sl;
+  border: 2px solid #2CAEF9;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  background-color: #21252B;
+  text-align: center;
+  animation: slide-in 2s -1s;
+}
+.portfolio > .container > .fullSlider:hover > .overlay {
+  animation: overlay-in 1s linear forwards;
+}
+.portfolio > .container > .fullSlider > .overlay {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 0%;
+  color: #FFF;
+  background-color: rgba(33, 37, 43, 0.6);
+  overflow: hidden;
+  animation: overlay-out 1s linear forwards;
+}
+@keyframes overlay-in {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
+  }
+}
+@keyframes overlay-out {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0%;
+  }
+}
+.portfolio > .container > .fullSlider > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+@keyframes slide-in {
+  0% {
+    transform: translate(-200px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+.portfolio > .container > .abstract {
+  grid-area: ab;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.portfolio > .container > .abstract button {
+  margin: 1em;
+  padding: 0.5em 3em;
+}
+.portfolio > .container > .abstract img {
+  width: 23em;
+  animation: roll-in 4s -1s ease-out;
+}
+@keyframes roll-in {
+  0% {
+    transform: translateX(200px) rotateZ(360deg);
+  }
+  55% {
+    transform: translateX(0) rotateZ(0deg);
+  }
+  62.5% {
+    transform: translateX(50px) rotateZ(20deg);
+  }
+  70% {
+    transform: translateX(0) rotateZ(0deg);
+  }
+  80% {
+    transform: translateX(25px) rotateZ(10deg);
+  }
+  100% {
+    transform: translateX(0) rotateZ(0deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

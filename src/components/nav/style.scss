@@ -1,0 +1,27 @@
+@import '../../pages/main';
+
+nav{
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    text-transform: uppercase;
+    grid-area: nv;
+    animation: top 3s forwards -1s;
+    & a{
+        text-decoration: none;
+        padding:0 0 0 1em;
+        cursor: pointer;
+        color:inherit;
+        &:hover{
+            color: $primaryColor;
+        }
+    }
+    @keyframes top {
+        from{
+            transform: translateY(-100px)
+        }
+        to{
+            transform: translateY(0)
+        }
+    }
+} 

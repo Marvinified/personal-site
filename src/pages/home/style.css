@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+body #app {
+  width: stretch;
+  height: stretch;
+}
+body * {
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 1000px) {
+  * {
+    font-size: 0.95em;
+  }
+}
+.homepage {
+  background-color: #21252b;
+  background-size: cover;
+  width: stretch;
+  height: 100vh;
+  color: white;
+  font-weight: bolder;
+  font-size: 0.72em;
+}
+.homepage > .container {
+  /* background: radial-gradient(circle, #2a96d5, transparent 30%); */
+  width: stretch;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 0.2fr repeat(11, 1fr) 0.2fr;
+  grid-template-rows: 0.5fr repeat(6, 1fr) 0.5fr;
+  grid-template-areas: ". hd hd nv nv nv nv nv nv nv nv nv ." ". fs fs fs fs fs fs fs fs fs fs fs ." ". ls ls mn mn mn mn mn mn mn rs rs ." ". ls ls mn mn mn mn mn mn mn rs rs ." ". ls ls mn mn mn mn mn mn mn rs rs ." ". ls ls mn mn mn mn mn mn mn rs rs ." ". ls ls pb pb pb pb pb pb pb rs rs ." ". bl bl bl bc bc bc bc bc br br br .";
+}
+.homepage > .container > header {
+  color: #2caef9;
+}
+.homepage > .container > section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: mn;
+}
+.homepage > .container > section > .background-image {
+  width: 30vw;
+}
+@keyframes abstract {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+.homepage > .container > .main {
+  grid-area: mn;
+  z-index: 1;
+  animation: main 5s linear infinite;
+  width: 45vw;
+  align-self: flex-end;
+  justify-self: center;
+}
+@keyframes main {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.homepage > .container > .left {
+  grid-area: ls;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  animation: left-in 3s ease-out -1s forwards;
+}
+@keyframes left-in {
+  from {
+    transform: translate(-50px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+.homepage > .container > .left > #leftSlider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.homepage > .container > .left > #leftSlider > .leftSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 20vw;
+}
+.homepage > .container > .left > #leftSlider > .leftSlide * {
+  margin: 0.1em;
+}
+.homepage > .container > .left > #leftSlider > .leftSlide > img {
+  width: 10vw;
+}
+.homepage > .container > .left > #leftSlider > .leftSlide > h2 {
+  color: #2caef9;
+}
+.homepage > .container > .left > #leftSlider > .leftSlide > h3 {
+  font-style: italic;
+}
+.homepage > .container > .right {
+  grid-area: rs;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  animation: right-in 3s ease-out -1s forwards;
+}
+@keyframes right-in {
+  from {
+    transform: translate(50px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+.homepage > .container > .right > .rightSlider {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.homepage > .container > .right > .rightSlider > div {
+  width: 22em;
+  height: fit-content;
+}
+.homepage > .container > .right > .rightSlider > div a {
+  color: #2caef9;
+  text-decoration: none;
+}
+.homepage > .container > .right > .rightSlider > div > h2 {
+  margin: 0.5em 0.1em;
+  color: #2caef9;
+  text-transform: uppercase;
+}
+.homepage > .container > .right > .rightSlider > div ul {
+  list-style-type: none;
+  margin: 0em;
+  padding: 0em;
+  height: fit-content;
+}
+.homepage > .container > .right > .rightSlider > div ul li {
+  display: inline-flex;
+}
+.homepage > .container > .right > .rightSlider > div ul li:before {
+  margin: 0.5em;
+  content: "";
+  background-position: center center;
+  vertical-align: top;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  background: url("../../assets/listMarker.png") no-repeat;
+  background-size: 1em 1em;
+}
+.homepage > .container > .right > .rightSlider > div ul li > div {
+  display: inline;
+}
+.homepage > .container > .right > .rightSlider > div ul li > div > * {
+  margin: 0.5em;
+}
+.homepage > .container > .right > .rightSlider > div ul li > div > h4 {
+  text-transform: uppercase;
+}
+.homepage > .container > .bottomCenter {
+  grid-area: bc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2caef9;
+}
+.homepage > .container > .btn {
+  grid-area: pb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homepage > .container > .btn button {
+  padding: 0.5em 1.5em;
+  color: white;
+}
+.homepage > .container > .btn button:hover {
+  color: #2caef9;
+  border-color: #2caef9;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
