@@ -15,15 +15,47 @@ function Home() {
         {/* <img alt="marvin" src={require("../assets/mario.png")} /> */}
         <h1>Marvin Tunji-ola</h1>
         <div className="title">
-          <a rel="noopener noreferrer" target="_blank" href="https://drive.google.com/file/d/1d9QPZAC02SbBBcPfFhFOC1NvlnMGYmG-/view?usp=sharing"> Frontend Developer </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://drive.google.com/file/d/1d9QPZAC02SbBBcPfFhFOC1NvlnMGYmG-/view?usp=sharing"
+          >
+            {" "}
+            Frontend Developer{" "}
+          </a>
           <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-          <a rel="noopener noreferrer" target="_blank" href="https://zitabyte.io"> Co-founder Zitabyte</a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://zitabyte.io"
+          >
+            {" "}
+            Co-founder Zitabyte
+          </a>
           <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-          <a rel="noopener noreferrer" target="_blank" href="https://letsmeat.ng"> Co-founder & CTO Let's Meat.</a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://letsmeat.ng"
+          >
+            {" "}
+            Co-founder & CTO Let's Meat.
+          </a>
           <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-          <a rel="noopener noreferrer" target="_blank" href="https://tropixel.com"> Tech Lead @ Tropixel BS</a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://tropixel.com"
+          >
+            {" "}
+            Tech Lead @ Tropixel BS
+          </a>
           <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-          <a rel="noopener noreferrer" target="_blank" href="https://drive.google.com/file/d/1d9QPZAC02SbBBcPfFhFOC1NvlnMGYmG-/view?usp=sharing">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://drive.google.com/file/d/1d9QPZAC02SbBBcPfFhFOC1NvlnMGYmG-/view?usp=sharing"
+          >
             <span>Resume</span>
             <ion-icon name="download"></ion-icon>
           </a>
@@ -46,17 +78,40 @@ function Home() {
         <br />
         <div className="connect">
           <span>Connect with me |</span>
-          <a rel="noopener noreferrer" target="_blank" href="https://linkedin.com/in/marvinified">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://linkedin.com/in/marvinified"
+          >
             <ion-icon name="logo-linkedin"></ion-icon>
           </a>
-          <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/marvinified">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://twitter.com/marvinified"
+          >
             <ion-icon name="logo-twitter"></ion-icon>
           </a>
-          <a rel="noopener noreferrer" target="_blank" href="https://github.com/marvinified">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://github.com/marvinified"
+          >
             <ion-icon name="logo-github"></ion-icon>
           </a>
-          <a rel="noopener noreferrer" target="_blank" href="mailto:marvinified@gmail.com">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="mailto:marvinified@gmail.com"
+          >
             <ion-icon name="mail"></ion-icon>
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://medium.com/@marvinified"
+          >
+            <ion-icon name="book"></ion-icon>
           </a>
         </div>
       </div>
