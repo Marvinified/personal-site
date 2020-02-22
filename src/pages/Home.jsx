@@ -35,7 +35,7 @@ function Home() {
         <br />
         I'm a sage of Javascript but also experienced in other languages such as
         PHP, Dart, Python. I'm experienced building elegant and functional
-        softwares as a team member and as well as a team lead. Collaboration and
+        softwares as a contributor and as well as a team lead. Collaboration and
         communication are part of my core principles.
         <br />
         <br />
@@ -46,16 +46,16 @@ function Home() {
         <br />
         <div className="connect">
           <span>Connect with me |</span>
-          <a href="/">
+          <a rel="noopener noreferrer" target="_blank" href="https://linkedin.com/in/marvinified">
             <ion-icon name="logo-linkedin"></ion-icon>
           </a>
-          <a href="/">
+          <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/marvinified">
             <ion-icon name="logo-twitter"></ion-icon>
           </a>
-          <a href="/">
+          <a rel="noopener noreferrer" target="_blank" href="https://github.com/marvinified">
             <ion-icon name="logo-github"></ion-icon>
           </a>
-          <a href="/">
+          <a rel="noopener noreferrer" target="_blank" href="mailto:marvinified@gmail.com">
             <ion-icon name="mail"></ion-icon>
           </a>
         </div>
