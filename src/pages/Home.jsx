@@ -40,7 +40,7 @@ function Home() {
         <br />
         <br />
         I love building beautiful and functional stuffs, I love coding, I'm an
-        AI/ML Ethusiast, belive in learning. love electronic music.
+        AI/ML Ethusiast, belive in learning, love electronic music.
         <br />
         <br />
         <br />
