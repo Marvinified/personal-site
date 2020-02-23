@@ -18,10 +18,10 @@ function Home() {
           <a
             rel="noopener noreferrer"
             target="_blank"
-            href="https://drive.google.com/file/d/1d9QPZAC02SbBBcPfFhFOC1NvlnMGYmG-/view?usp=sharing"
+            href="https://drive.google.com/file/d/1oXk9uukqV3gSfAvUNumN2KyUrqwb-GHC/view?usp=sharing"
           >
             {" "}
-            Frontend Developer{" "}
+            Software Developer{" "}
           </a>
           <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
           <a
@@ -54,7 +54,7 @@ function Home() {
           <a
             rel="noopener noreferrer"
             target="_blank"
-            href="https://drive.google.com/file/d/1d9QPZAC02SbBBcPfFhFOC1NvlnMGYmG-/view?usp=sharing"
+            href="https://drive.google.com/file/d/1oXk9uukqV3gSfAvUNumN2KyUrqwb-GHC/view?usp=sharing"
           >
             <span>Resume</span>
             <ion-icon name="download"></ion-icon>
