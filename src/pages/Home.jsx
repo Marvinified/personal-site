@@ -24,7 +24,7 @@ function Home() {
             Software Developer{" "}
           </a>
           <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-          <a
+          {/* <a
             rel="noopener noreferrer"
             target="_blank"
             href="https://zitabyte.io"
@@ -32,7 +32,7 @@ function Home() {
             {" "}
             Co-founder Zitabyte
           </a>
-          <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+          <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span> */}
           <a
             rel="noopener noreferrer"
             target="_blank"
@@ -48,7 +48,7 @@ function Home() {
             href="https://tropixel.com"
           >
             {" "}
-            Tech Lead @ Tropixel BS
+            Lead Developer @ Tropixel BS
           </a>
           <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
           <a
