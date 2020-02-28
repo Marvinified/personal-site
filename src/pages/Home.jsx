@@ -45,7 +45,7 @@ function Home() {
           <a
             rel="noopener noreferrer"
             target="_blank"
-            href="https://tropixel.com.ng"
+            href="http://tropixel.com.ng"
           >
             {" "}
             Lead Developer @ Tropixel BS
