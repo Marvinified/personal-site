@@ -39,7 +39,7 @@ function Home() {
             href="https://letsmeat.ng"
           >
             {" "}
-            Co-founder & CTO Let's Meat.
+            Co-founder & CTO @ Let's Meat.
           </a>
           <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
           <a
