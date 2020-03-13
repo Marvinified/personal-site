@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import useState, * as React from "react";
 import "../styles/home.scss";
 
 function Home() {
@@ -51,13 +51,21 @@ function Home() {
             Lead Developer @ Tropixel BS
           </a>
           <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-          <a
+          {/* <a
             rel="noopener noreferrer"
             target="_blank"
             href="https://drive.google.com/file/d/1oXk9uukqV3gSfAvUNumN2KyUrqwb-GHC/view?usp=sharing"
           >
             <span>Resume</span>
             <ion-icon name="download"></ion-icon>
+          </a> */}
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://drive.google.com/file/d/1oXk9uukqV3gSfAvUNumN2KyUrqwb-GHC/view?usp=sharing"
+          >
+            <span>Blog</span>
+            <ion-icon name="book"></ion-icon>
           </a>
         </div>
         <br />
