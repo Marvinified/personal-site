@@ -12,7 +12,6 @@ function Home() {
         </div>
       </div>
       <div className="content">
-        {/* <img alt="marvin" src={require("../assets/mario.png")} /> */}
         <h1>Marvin Tunji-ola</h1>
         <div className="title">
           <a
@@ -24,24 +23,6 @@ function Home() {
             Software Developer{" "}
           </a>
           <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-          {/* <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://zitabyte.io"
-          >
-            {" "}
-            Co-founder Zitabyte
-          </a>
-          <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span> */}
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://letsmeat.ng"
-          >
-            {" "}
-            Co-founder @ Let's Meat.
-          </a>
-          <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
           <a
             rel="noopener noreferrer"
             target="_blank"
@@ -51,14 +32,14 @@ function Home() {
             Lead Developer @ Tropixel BS
           </a>
           <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-          {/* <a
+          <a
             rel="noopener noreferrer"
             target="_blank"
             href="https://drive.google.com/file/d/1oXk9uukqV3gSfAvUNumN2KyUrqwb-GHC/view?usp=sharing"
           >
             <span>Resume</span>
             <ion-icon name="download"></ion-icon>
-          </a> */}
+          </a>
           <a
             rel="noopener noreferrer"
             target="_blank"
