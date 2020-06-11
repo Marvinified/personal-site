@@ -35,7 +35,7 @@ function Home() {
           <a
             rel="noopener noreferrer"
             target="_blank"
-            href="https://drive.google.com/file/d/1oXk9uukqV3gSfAvUNumN2KyUrqwb-GHC/view?usp=sharing"
+            href="https://drive.google.com/file/d/1LhEtGOkdJ7FS5N-jZiY7m_xVCgdmcjxS/view?usp=sharing"
           >
             <span>Resume</span>
             <ion-icon name="download"></ion-icon>
