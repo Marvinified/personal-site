@@ -40,6 +40,8 @@ function Home() {
             <span>Resume</span>
             <ion-icon name="download"></ion-icon>
           </a>
+          <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+
           <a
             rel="noopener noreferrer"
             target="_blank"
