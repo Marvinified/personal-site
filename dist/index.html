@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html x-data="loadData()">
+
+<head>
+    <title>I'm Marvin</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/socicon@3.0.5/css/socicon.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="/src.e31bb0bc.css"></head>
+
+<body x-bind:class="{'body-dark': theme === 'dark'}">
+    <div class="app">
+        <section id="intro">
+            <div id="one">
+                <div class="intro-top">
+                    <span @click="theme = theme === 'dark' ? 'light' : 'dark'" class="theme-toggle" x-bind:class="{'dark-theme-toggle': theme === 'dark'}">
+                        <span class="switch" x-bind:class="{'active': theme === 'dark' }">🌜</span>
+                        <span class="switch" x-bind:class="{'active': theme === 'light' }">🌞</span>
+                    </span>
+                </div>
+                <div class="intro">
+                    <span>
+                        Hi there👋, I'm
+                    </span>
+                    <h1>
+                        Marvin.
+                    </h1>
+                    <h6 class="primary-text">
+                        Frontend Developer
+                    </h6>
+                    <span>
+                        I'm passionate about creating experiences.
+                    </span>
+                    <i class="lite-info primary-text scroll-left mobile-only">Scroll right for more <i class="material-icons">arrow_right_alt</i></i>
+                </div>
+            </div>
+            <footer x-bind:class="{'dark-footer': theme === 'dark'}">
+                <a class="btn" x-bind:class="{'dark-btn': theme === 'dark'}" href="">Hire Me</a>
+            </footer>
+        </section>
+        <section>
+            <div id="two">
+                <div class="grid">
+                    <div class="frame frame-at-top frame-color-1 a">
+                    </div>
+                    <div class="frame frame-at-top frame-color-2 b">
+                    </div>
+                    <div class="frame frame-color-2 c">
+                    </div>
+                    <div class="frame frame-color-1 d">
+                    </div>
+                    <div class="frame frame-color-3 e">
+                    </div>
+                    <div class="frame frame-color-4 f">
+                    </div>
+                    <div class="frame frame-color-5 g">
+                    </div>
+                </div>
+            </div>
+            <footer x-bind:class="{'dark-footer': theme === 'dark'}">
+
+            </footer>
+        </section>
+        <!-- Experiences -->
+        <section id="experiences">
+            <div class="intro-container">
+                <div class="intro-top">
+                    <span>Experiences? <span class="primary-text">Oh yes!</span></span>
+                </div>
+                <div class="intro">
+                    <span class="primary-text">
+                        The Journey
+                    </span>
+                    <h1>
+                        Work
+                        Experiences
+                    </h1>
+                    <span>
+                        Experiences are what defines who we are.
+                    </span>
+                </div>
+            </div>
+            <footer x-bind:class="{'dark-footer': theme === 'dark'}">
+                <i class="lite-info primary-text">My Experiences <i class="material-icons">arrow_right_alt</i></i>
+            </footer>
+        </section>
+        <template x-for="(item, index) in experiences" :key="index">
+            <section>
+                <div class="list-item">
+                    <div class="top-grid">
+                        <div class="frame frame-at-top frame-color-2 a"></div>
+                        <div x-bind:class="`frame frame-at-top frame-color-${random(1, 5)} b`"></div>
+                        <span class="flex-align-center primary-text c" x-text="`${item.from} - ${item.to}`">
+                        </span>
+                        <img x-bind:class="`frame frame-color-${random(1, 5)} d`" x-bind:src="item.images[0]" alt="">
+
+                        <div class="flex-column flex-justify-center e">
+                            <span class="flex-align-center primary-text" x-text="`${item.position}@`">
+                            </span>
+                            <h5 class="flex-align-center" x-text="`${item.company}`">
+                            </h5>
+                            <span class="flex-align-center" x-text="`${item.location}`">
+                            </span>
+                        </div>
+                        <img x-bind:class="`frame frame-color-${random(1, 5)} f`" x-bind:src="item.images[1]" alt="">
+
+                        <div class="g">
+                            <p x-text="item.description"></p>
+                            <a x-bind:href="item.url">See here</a>
+                        </div>
+                    </div>
+                </div>
+                <footer x-bind:class="{'dark-footer': theme === 'dark'}">
+
+                </footer>
+            </section>
+        </template>
+        <!-- Projects -->
+        <section id="projects">
+            <div clas="intro-container">
+                <div class="intro-top">
+                    <span>Projects <span class="primary-text">& Stuffs</span></span>
+                </div>
+                <div class="intro">
+                    <span class="primary-text">
+                        Some Magic...
+                    </span>
+                    <h1>
+                        Projects &
+                        Stuffs
+                    </h1>
+                    <span>
+                        Coding can be as powerful as magic.
+                    </span>
+                </div>
+            </div>
+            <footer x-bind:class="{'dark-footer': theme === 'dark'}">
+                <i class="lite-info primary-text">My Projects <i class="material-icons">arrow_right_alt</i></i>
+            </footer>
+        </section>
+        <template x-for="(item, index) in projects" :key="index">
+            <section>
+                <div class="list-item">
+                    <div class="bottom-grid">
+                        <div x-bind:class="`a frame frame-color-${random(1, 5)}`"></div>
+                        <div x-bind:class="`a frame frame-color-${random(1, 5)}`"></div>
+                        <div class="c ">
+                            <h5 class="flex-align-center" x-text="item.name">
+                            </h5>
+                            <template x-for="(tag) in item.tags" :key="index">
+                                <span class="primary-text" x-text="`#${tag} `">
+                                </span>
+                            </template>
+
+                        </div>
+                        <img x-bind:src="item.images[0]" x-bind:class="`d frame frame-color-${random(1,5)} frame-at-bottom`">
+                        <!-- <div class="d frame frame-color-3 frame-at-bottom"></div> -->
+                        <div class="e ">
+                            <p x-text="item.description"></p>
+                            <p>
+                                <a x-bind:href="item.url">
+                                    See here
+                                </a>
+                            </p>
+                        </div>
+                        <img x-bind:src="item.images[1]" x-bind:class="`f frame frame-color-${random(1,5)} frame-at-bottom`">
+
+                    </div>
+                </div>
+                <footer x-bind:class="{'dark-footer': theme === 'dark'}">
+                    <i class="lite-info primary-text" x-text="`Project #${index + 1}`"></i>
+                    <i class="material-icons lite-info primary-text">arrow_right_alt</i>
+
+                </footer>
+            </section>
+        </template>
+        <!-- Extra -->
+        <section id="extra">
+            <div>
+                <div class="extra-grid">
+                    <div class="a frame frame-color-1">
+                        <h4>Blog</h4>
+                        <p>
+                            I write about code and magic on
+                            <br>
+                            <b>
+                                <a href="https://medium.com/@marvinified">Medium</a>
+                            </b>
+                        </p>
+                        <p>
+                            <i>
+                                <b>The Silent Blog</b>
+                                <br>
+                                Coming soon.
+                            </i>
+                        </p>
+                    </div>
+                    <div class="b frame frame-color-5">
+                        <h5>
+                            Thanks, you reach may me at
+                        </h5>
+                        <br>
+                        <b>
+                            <a href="">marvinified@gmail.com</a>
+                        </b>
+                    </div>
+                    <div class="c frame frame-color-2 flex-center ">
+                        <a href="" class="socicon-github icon texiary-text" x-bind:class="{'icon-dark': theme === 'dark'}"></a>
+                    </div>
+                    <div class="d frame frame-color-3">
+                    </div>
+                    <div class="e frame frame-color-3">
+                    </div>
+                    <div class="f frame frame-color-2 flex-center">
+                        <a href="" class="socicon-linkedin icon texiary-text" x-bind:class="{'icon-dark': theme === 'dark'}">
+                        </a>
+                    </div>
+                    <div class="g frame frame-color-2 flex-center">
+                        <a href="" class="socicon-twitter icon texiary-text" x-bind:class="{'icon-dark': theme === 'dark'}">
+                        </a>
+                    </div>
+                    <div class="h frame frame-color-3">
+                    </div>
+                    <div class="i frame frame-color-3"></div>
+                    <div class="j frame frame-color-2"></div>
+                </div>
+            </div>
+            <footer class="extra-footer" x-bind:class="{'dark-footer': theme === 'dark'}">
+                <a class="lite-info primary-text" href="/#intro"><i class="material-icons">keyboard_backspace</i>Back
+                    Home
+                    
+            </a></footer>
+        </section>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+    <script src="/src.e31bb0bc.js"></script>
+    <script>function loadData() {
+  return {
+    theme: 'light',
+    experiences: [{
+      company: "Tropixel BSL",
+      position: "Lead Developer",
+      location: "Lagos, Nigeria",
+      from: "Oct 2018",
+      to: "Present",
+      images: ['./assets/ex1_1.png', './assets/ex1_2.png'],
+      url: "https://flycash.ng",
+      description: 'Lead development effort for the Flycash project.'
+    }, {
+      company: "Fireflies AI",
+      position: "Contract Frontend Engineer",
+      location: "CA, US",
+      from: "Apr 2019",
+      to: "Aug 2019",
+      images: ['./assets/ex2_1.png', './assets/ex2_2.png'],
+      url: "https://fireflies.ai",
+      description: 'Setup Fireflies Integrations with Salesforce and Zoho.'
+    }, {
+      company: "Emplug Inc.",
+      position: "Frontend Engineer",
+      location: "CA, US",
+      from: "May 2018",
+      to: "Oct 2018",
+      images: ['./assets/ex2_1.png', './assets/ex2_2.png'],
+      url: "https://emplug.com",
+      description: 'Contributed to development on Platform Dashboard.'
+    }],
+    projects: [{
+      name: "FlyCash",
+      images: ['./assets/ex1_1.png', './assets/ex1_2.png'],
+      url: "https://flycash.ng",
+      description: 'Lead Development effort for the flycash project.',
+      tags: ["opensource", "design"]
+    }, {
+      name: "FlyCash",
+      images: ['./assets/ex1_1.png', './assets/ex1_2.png'],
+      url: "https://flycash.ng",
+      description: 'Lead Development effort for the flycash project.',
+      tags: ["opensource"]
+    }],
+    random: function random(min, max) {
+      // generate random value between min and max inclusive of both values
+      return Math.floor(Math.random() * max) + min;
+    }
+  };
+}</script>
+</body>
+
+</html>

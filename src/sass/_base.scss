@@ -1,0 +1,213 @@
+$primary-color: #5c80ff;
+$secondary-color: #ffffff;
+$texiary-color: #00324e;
+$dark-primary-color: #232529;
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+html,
+body {
+  overflow: scroll;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: $secondary-color;
+  color: $texiary-color;
+  margin: 0;
+  & * {
+    box-sizing: border-box;
+  }
+}
+
+// General Utilities
+
+// Text colors
+.primary-text {
+  color: $primary-color;
+}
+
+.secondary-text {
+  color: $secondary-color;
+}
+
+.texiary-text {
+  color: $texiary-color;
+}
+// Bg Colors
+.primary-bg {
+  background-color: $primary-color;
+}
+
+.secondary-bg {
+  background-color: $secondary-color;
+}
+
+.texiary-bg {
+  background-color: $texiary-color;
+}
+
+// Icons, Links and Button
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+.btn {
+  padding: 0.5em 1em;
+  border: 0.05em solid $texiary-color;
+  border-radius: 0.5em;
+  color: $texiary-color;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+}
+
+// Frames colors
+.frame-color-1 {
+  border-color: #ffbcb8;
+}
+.frame-color-2 {
+  border-color: #c9d5ff;
+}
+.frame-color-3 {
+  border-color: #fff2c2;
+}
+.frame-color-4 {
+  border-color: #ffa4e5;
+}
+.frame-color-5 {
+  border-color: #ff6f6f;
+}
+
+.debug {
+  border: 0.1em solid red;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.1em 0;
+}
+
+h1 {
+  font-size: 4em;
+}
+h2 {
+  font-size: 3.5em;
+}
+h3 {
+  font-size: 3em;
+}
+h4 {
+  font-size: 2.5em;
+}
+h5 {
+  font-size: 2em;
+}
+h6 {
+  font-size: 1.5em;
+}
+
+// Flex Center
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+// Grid Items
+.a {
+  grid-area: a;
+}
+.b {
+  grid-area: b;
+}
+.c {
+  grid-area: c;
+}
+.d {
+  grid-area: d;
+}
+.e {
+  grid-area: e;
+}
+.f {
+  grid-area: f;
+}
+.g {
+  grid-area: g;
+}
+.h {
+  grid-area: h;
+}
+.i {
+  grid-area: i;
+}
+.j {
+  grid-area: j;
+}
+
+.mobile-only {
+  visibility: hidden;
+}
+
+// Mobile
+@media only screen and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  body {
+    font-size: 35px;
+  }
+  .mobile-only {
+    visibility: visible;
+  }
+}

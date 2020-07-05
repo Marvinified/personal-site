@@ -1,0 +1,49 @@
+$primary-color: #5c80ff;
+$dark-secondary-color: #232529;
+$dark-texiary-color: #ffffff;
+
+.body-dark {
+  background-color: $dark-secondary-color;
+  color: $dark-texiary-color;
+}
+// General Utilities
+
+//Dark Text colors
+
+.dark-secondary-text {
+  color: $dark-secondary-color;
+}
+
+.dark-texiary-text {
+  color: $dark-texiary-color;
+}
+// Bg Colors
+.dark-secondary-bg {
+  background-color: $dark-secondary-color;
+}
+
+.dark-texiary-bg {
+  background-color: $dark-texiary-color;
+}
+
+.dark-btn {
+  padding: 0.5em 1em;
+  border: 0.05em solid $dark-texiary-color;
+  border-radius: 0.5em;
+  color: $dark-texiary-color;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+}
+
+
+// Mobile
+@media only screen and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  body {
+    font-size: 35px;
+  }
+  .mobile-only {
+    visibility: visible;
+  }
+}
