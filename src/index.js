@@ -13,7 +13,7 @@ let translateX = 0
 document.addEventListener("wheel", (event) => {
     event.preventDefault();
 
-    const factor = 15 * Math.abs(event.deltaY)
+    const factor = 2 * Math.abs(event.deltaY)
     const app = document.querySelector('.app')
     const width = app.clientWidth - window.innerWidth;
 
