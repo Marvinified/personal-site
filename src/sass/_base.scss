@@ -198,11 +198,13 @@ h6 {
   grid-area: j;
 }
 
-.mobile-only {
-  display: none !important;
-}
-.web-only {
-  display: initial !important;
+@media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .mobile-only {
+    display: none !important;
+  }
+  .web-only {
+    display: initial;
+  }
 }
 
 // Mobile
@@ -211,7 +213,7 @@ h6 {
     font-size: 35px;
   }
   .mobile-only {
-    display: initial !important;
+    display: initial;
   }
   .web-only {
     display: none !important;
