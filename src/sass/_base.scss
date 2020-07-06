@@ -199,10 +199,10 @@ h6 {
 }
 
 .mobile-only {
-  display: none;
+  display: none !important;
 }
 .web-only {
-  display: initial;
+  display: initial !important;
 }
 
 // Mobile
@@ -211,9 +211,9 @@ h6 {
     font-size: 35px;
   }
   .mobile-only {
-    display: initial;
+    display: initial !important;
   }
   .web-only {
-    display: none;
+    display: none !important;
   }
 }

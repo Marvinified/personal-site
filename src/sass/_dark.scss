@@ -37,13 +37,3 @@ $dark-texiary-color: #ffffff;
   -o-border-radius: 0.5em;
 }
 
-
-// Mobile
-@media only screen and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-  body {
-    font-size: 35px;
-  }
-  .mobile-only {
-    visibility: visible;
-  }
-}
