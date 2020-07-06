@@ -37,7 +37,8 @@
                 </div>
             </div>
             <footer x-bind:class="{'dark-footer': theme === 'dark'}">
-                <a class="btn" x-bind:class="{'dark-btn': theme === 'dark'}" href="">Hire Me</a>
+                <a class="btn" x-bind:class="{'dark-btn': theme === 'dark'}" target="__blank"
+                    href="mailto:marvinified@gmail.com">Hire Me</a>
             </footer>
         </section>
         <section>
@@ -108,7 +109,7 @@
 
                         <div class="g">
                             <p x-text="item.description"></p>
-                            <a x-bind:href="item.url">See here</a>
+                            <a target="__blank" x-bind:href="item.url">See here</a>
                         </div>
                     </div>
                 </div>
@@ -161,7 +162,7 @@
                         <div class="e ">
                             <p x-text="item.description"></p>
                             <p>
-                                <a x-bind:href="item.url">
+                                <a target="__blank" x-bind:href="item.url">
                                     See here
                                 </a>
                             </p>
@@ -188,7 +189,7 @@
                             I write about code and magic on
                             <br />
                             <b>
-                                <a href="https://medium.com/@marvinified">Medium</a>
+                                <a target="__blank" href="https://medium.com/@marvinified">Medium</a>
                             </b>
                         </p>
                         <p>
@@ -205,25 +206,25 @@
                         </h5>
                         <br />
                         <b>
-                            <a href="">marvinified@gmail.com</a>
+                            <a target="__blank" href="mailto:marvinified@gmail.com">marvinified@gmail.com</a>
                         </b>
                     </div>
                     <div class="c frame frame-color-2 flex-center ">
-                        <a href="" class="socicon-github icon texiary-text"
-                            x-bind:class="{'icon-dark': theme === 'dark'}"></a>
+                        <a target="__blank" href="https://github.com/marvinified"
+                            class="socicon-github icon texiary-text" x-bind:class="{'icon-dark': theme === 'dark'}"></a>
                     </div>
                     <div class="d frame frame-color-3">
                     </div>
                     <div class="e frame frame-color-3">
                     </div>
                     <div class="f frame frame-color-2 flex-center">
-                        <a href="" class="socicon-linkedin icon texiary-text"
-                            x-bind:class="{'icon-dark': theme === 'dark'}">
+                        <a target="__blank" href="https://linkedin.com/in/marvinified"
+                            class="socicon-linkedin icon texiary-text" x-bind:class="{'icon-dark': theme === 'dark'}">
                         </a>
                     </div>
                     <div class="g frame frame-color-2 flex-center">
-                        <a href="" class="socicon-twitter icon texiary-text"
-                            x-bind:class="{'icon-dark': theme === 'dark'}">
+                        <a target="__blank" href="https://twitter.com/marvinified"
+                            class="socicon-twitter icon texiary-text" x-bind:class="{'icon-dark': theme === 'dark'}">
                         </a>
                     </div>
                     <div class="h frame frame-color-3">
@@ -270,11 +271,11 @@
                     },
                     {
                         company: "Emplug Inc.",
-                        position: "Frontend Engineer",
+                        position: "Software Engineer",
                         location: "CA, US",
                         from: "May 2018",
                         to: "Oct 2018",
-                        images: ['./assets/ex2_1.png', './assets/ex2_2.png'],
+                        images: ['./assets/ex3_1.png', './assets/ex3_2.png'],
                         url: "https://emplug.com",
                         description: 'Contributed to development on Platform Dashboard.',
                     },
@@ -282,19 +283,26 @@
                 ],
                 projects: [
                     {
-                        name: "FlyCash",
-                        images: ['./assets/ex1_1.png', './assets/ex1_2.png'],
-                        url: "https://flycash.ng",
-                        description: 'Lead Development effort for the flycash project.',
-                        tags: ["opensource", "design"],
+                        name: "Let's Meat",
+                        images: ['./assets/pr1_1.png', './assets/pr1_2.png'],
+                        url: "https://letsmeat.ng",
+                        description: 'Lead Development effort for the Let\'s Meat project.',
+                        tags: ["business", "webapp"],
                     },
                     {
-                        name: "FlyCash",
-                        images: ['./assets/ex1_1.png', './assets/ex1_2.png'],
-                        url: "https://flycash.ng",
-                        description: 'Lead Development effort for the flycash project.',
-                        tags: ["opensource"],
-                    }
+                        name: "Lite Frames",
+                        images: ['./assets/pr2_1.png', './assets/pr2_2.png'],
+                        url: "https://www.npmjs.com/package/lite-frames",
+                        description: 'This is a library of light weight frames UI (device, screens) made into web-components. you are allowed to embed whatever inside the frames',
+                        tags: ["oppensource", "frontend", "npm"],
+                    },
+                    {
+                        name: "Oz Dark",
+                        images: ['./assets/pr3_1.png', './assets/pr3_2.png'],
+                        url: "https://www.figma.com/proto/280t8ozJL5fZxL7ZqnEHXk/Oz-Dark?node-id=1%3A2&scaling=min-zoom&hotspot-hints=0",
+                        description: 'This is a library of light weight frames UI (device, screens) made into web-components. you are allowed to embed whatever inside the frames',
+                        tags: ["fun", "design", "figma"],
+                    },
                 ],
                 random: (min, max) => {
                     // generate random value between min and max inclusive of both values
