@@ -3,7 +3,7 @@ import 'alpinejs'
 // Animations
 gsap.from("#one", { duration: 2, x: -100, ease: "bounce.out" });
 gsap.from("#two", { delay: 0, duration: 2, y: -650, ease: "bounce.out" });
-gsap.to(".scroll-left", { delay: 0, duration: 2, translateX: 30, ease: "ease.out", repeat: -1, loop: true });
+gsap.to(".scroll-left", { delay: 0, duration: 2, translateX: 30, ease: "ease.out", repeat: -1});
 
 
 
@@ -12,7 +12,8 @@ gsap.to(".scroll-left", { delay: 0, duration: 2, translateX: 30, ease: "ease.out
 let translateX = 0
 document.addEventListener("wheel", (event) => {
     event.preventDefault();
-
+    
+    console.log("Scrolled")
     const factor = 15 * Math.abs(event.deltaY)
     const app = document.querySelector('.app')
     const width = app.clientWidth - window.innerWidth;
