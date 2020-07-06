@@ -15,11 +15,17 @@ body {
   overflow: scroll;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   font-family: "Quicksand", sans-serif;
   background-color: $secondary-color;
   color: $texiary-color;
   margin: 0;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   & * {
     box-sizing: border-box;
   }
