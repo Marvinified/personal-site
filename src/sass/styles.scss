@@ -23,7 +23,7 @@ footer.extra-footer {
 .app {
   display: flex;
   overflow-y: hidden;
-  width: fit-content;
+  width: max-content;
   backface-visibility: hidden;
   will-change: transform;
 }
