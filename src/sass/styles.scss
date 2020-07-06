@@ -272,6 +272,11 @@ section {
     & > #two > .grid {
       height: 80vh;
     }
+    &#extra {
+      & > div {
+        height: 82vh;
+      }
+    }
   }
   .top-grid {
     height: 80vh;
