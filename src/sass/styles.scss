@@ -39,6 +39,10 @@ section {
   & > #one {
     width: 40em;
   }
+  &#skills > footer {
+    justify-content: flex-end;
+  }
+
   & > #two {
     padding-top: 5vh;
     display: flex;
