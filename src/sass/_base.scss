@@ -8,6 +8,11 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
+  transition: background-color 1s, color 1s;
+  -webkit-transition: background-color 1s, color 1s;
+  -moz-transition: background-color 1s, color 1s;
+  -ms-transition: background-color 1s, color 1s;
+  -o-transition: background-color 1s, color 1s;
 }
 
 html,
