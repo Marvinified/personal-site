@@ -4,7 +4,7 @@
 // Specifics
 footer {
   height: 8vh;
-  border-top: 0.01em solid $texiary-color;
+  border-top: 0.05em solid $texiary-color;
   width: --webkit-fill-available;
   display: flex;
   box-sizing: border-box;
@@ -13,7 +13,7 @@ footer {
 }
 
 footer.dark-footer {
-  border-top: 0.01em solid $dark-texiary-color;
+  border-top: 0.05em solid $dark-texiary-color;
 }
 
 footer.extra-footer {
@@ -26,6 +26,7 @@ footer.extra-footer {
   width: max-content;
   backface-visibility: hidden;
   will-change: transform;
+  -webkit-backface-visibility: hidden;
 }
 
 section {
@@ -155,7 +156,7 @@ section {
   height: 10%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   & > .theme-toggle {
     border: 0.05em solid $texiary-color;
     padding: 0.1em;
