@@ -1,5 +1,8 @@
 import "./sass/styles.scss";
 import 'alpinejs'
+
+// 
+console.log("Designed and developed by Marvin Tunji-ola")
 // Animations
 gsap.from("#one", { duration: 2, x: -100, ease: "bounce.out" });
 gsap.from("#two", { delay: 0, duration: 2, y: -650, ease: "bounce.out" });
@@ -21,9 +24,6 @@ document.addEventListener("wheel", (event) => {
         // scroll up
         translateX -= factor
         translateX = Math.abs(translateX) > Math.abs(width) ? -width : translateX
-        console.log(gsap)
-        console.log("Got")
-        console.log({ factor, translateX, width: app.clientWidth, inner: window.innerWidth })
         gsap.to('.app', { duration: 0.5, translateX })
     }
 
