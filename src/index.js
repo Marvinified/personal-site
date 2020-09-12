@@ -2,7 +2,7 @@ import "./sass/styles.scss";
 import 'alpinejs'
 
 // 
-console.log("Designed and developed by Marvin Tunji-ola")
+console.log("❤️ Designed and developed by Marvin Tunji-ola")
 // Animations
 gsap.from("#one", { duration: 2, x: -100, ease: "bounce.out" });
 gsap.from("#two", { delay: 0, duration: 2, y: -650, ease: "bounce.out" });
