@@ -107,8 +107,6 @@
                             Node.js
                         </span>
                     </div>
-
-
                 </div>
                 <div id="skills-footer">
                     <span>
@@ -153,22 +151,18 @@
             <section>
                 <div class="list-item">
                     <div class="top-grid">
-                        <div class="frame frame-at-top frame-color-2 a"></div>
-                        <div x-bind:class="`frame frame-at-top frame-color-${random(1, 5)} b`"></div>
-                        <span class="flex-align-center primary-text c" x-text="`${item.from} - ${item.to}`">
-                        </span>
-                        <img x-bind:class="`frame frame-color-${random(1, 5)} d`" x-bind:src="item.images[0]" alt="" />
-
                         <div class="flex-column flex-justify-center e">
-                            <span class="flex-align-center primary-text" x-text="`${item.position}@`">
-                            </span>
                             <h5 class="flex-align-center" x-text="`${item.company}`">
                             </h5>
                             <span class="flex-align-center" x-text="`${item.location}`">
                             </span>
+                            <br />
+                            <span class="flex-align-center primary-text" x-text="`${item.position}`">
+                            </span>
                         </div>
+                        <span class="flex-align-center c" x-text="`${item.from} - ${item.to}`">
+                        </span>
                         <img x-bind:class="`frame frame-color-${random(1, 5)} f`" x-bind:src="item.images[1]" alt="" />
-
                         <div class="g">
                             <p x-text="item.description"></p>
                             <a target="__blank" x-bind:href="item.url">See here</a>
@@ -216,22 +210,16 @@
                                 <span class="primary-text" x-text="`#${tag} `">
                                 </span>
                             </template>
-
-                        </div>
-                        <img x-bind:src="item.images[0]"
-                            x-bind:class="`d frame frame-color-${random(1,5)} frame-at-bottom`" />
-                        <!-- <div class="d frame frame-color-3 frame-at-bottom"></div> -->
-                        <div class="e ">
                             <p x-text="item.description"></p>
                             <p>
                                 <a target="__blank" x-bind:href="item.url">
                                     See here
                                 </a>
                             </p>
-                        </div>
-                        <img x-bind:src="item.images[1]"
-                            x-bind:class="`f frame frame-color-${random(1,5)} frame-at-bottom`" />
 
+                        </div>
+                        <img x-bind:src="item.images[0]"
+                            x-bind:class="`d frame frame-color-${random(1,5)} frame-at-bottom`" />
                     </div>
                 </div>
                 <footer x-bind:class="{'dark-footer': theme === 'dark'}">
@@ -316,7 +304,7 @@
                         location: "Florida, Maimi, United States",
                         from: "Oct 2020",
                         to: "Mar 2022",
-                        images: ['./assets/ex2_1.png', './assets/ex2_2.png'],
+                        images: [],
                         url: "https://getcaribou.com",
                         description: 'Build features, Fix bugs.',
                     },
@@ -326,7 +314,7 @@
                         location: "San Francisco, CA, United States",
                         from: "Oct 2020",
                         to: "Mar 2022",
-                        images: ['./assets/ex2_1.png', './assets/ex2_2.png'],
+                        images: [],
                         url: "https://fireflies.ai",
                         description: 'Build features, Fix bugs.',
                     },
@@ -336,7 +324,7 @@
                         location: "Lagos, Nigeria",
                         from: "Aug 2019",
                         to: "Oct 2020",
-                        images: ['./assets/ex1_1.png', './assets/ex1_2.png'],
+                        images: [],
                         url: "https://flycash.ng",
                         description: 'Lead frontend development effort for the Flycash project.',
                     },
@@ -346,7 +334,7 @@
                         location: "Lagos, Nigeria",
                         from: "Oct 2018",
                         to: "Oct 2020",
-                        images: ['./assets/ex1_1.png', './assets/ex1_2.png'],
+                        images: [],
                         url: "https://flycash.ng",
                         description: 'Build features, Fix bugs.',
                     },
@@ -356,7 +344,7 @@
                         location: "CA, US",
                         from: "May 2018",
                         to: "Oct 2018",
-                        images: ['./assets/ex3_1.png', './assets/ex3_2.png'],
+                        images: [],
                         url: "https://emplug.com",
                         description: 'Worked primarily on redesign and development of Web Dashboard.',
                     },
@@ -365,21 +353,21 @@
                 projects: [
                     {
                         name: "Rewrote AI",
-                        images: ['./assets/pr1_1.png', './assets/pr1_2.png'],
+                        images: [],
                         url: "https://rewrote.ai",
                         description: 'AI tool for everyday writing',
                         tags: ["ai", "productivity"],
                     },
                     {
                         name: "Use File Upload",
-                        images: ['./assets/pr2_1.png', './assets/pr2_2.png'],
+                        images: [],
                         url: "https://www.npmjs.com/package/lite-frames",
                         description: 'React hooks library for handling uploads',
                         tags: ["opensource", "frontend", "npm"],
                     },
                     {
                         name: "Lite Frames",
-                        images: ['./assets/pr2_1.png', './assets/pr2_2.png'],
+                        images: [],
                         url: "https://www.npmjs.com/package/lite-frames",
                         description: 'This is a library of light weight frames UI (device, screens) made into web-components. you are allowed to embed whatever inside the frames',
                         tags: ["opensource", "frontend", "npm"],
